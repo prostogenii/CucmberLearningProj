@@ -7,6 +7,6 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/java/features",
-        glue = "src/test/java/stepDefinations", stepNotifications = true)
+        glue = "stepDefinations", tags = "@MobileTest")
 public class TestRun {
 }

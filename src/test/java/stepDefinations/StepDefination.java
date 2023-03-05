@@ -17,12 +17,13 @@ public class StepDefination {
         System.out.println("Navigated to login url");
     }
 
-    @When("^User login into application with username and password$")
-    public void user_login_into_application_with_username_and_password() {
-        System.out.println("Login successfully");
+    @When("User login into application with name and password")
+    public void user_login_into_application_with_name_and_password() {
+        System.out.println("User is validating");
     }
 
-    @Then("^Home page is open$")
+
+        @Then("^Home page is open$")
     public void home_page_is_open() {
         System.out.println("Validated homepage");
 
@@ -31,6 +32,12 @@ public class StepDefination {
     @And("^Card are displayed$")
     public void card_are_displayed() {
         System.out.println("Validated cards");
+    }
+
+    @When("^User login into application with (.+) and password (.+)$")
+    public void user_login_into_application_with_and_password(String username, String password) throws Throwable {
+        System.out.print(username+" ");
+        System.out.println(password);
     }
 
 }
